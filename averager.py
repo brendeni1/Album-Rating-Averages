@@ -15,6 +15,8 @@ while True:
 
     if user_input == "":
         break
+    elif user_input == "--/10":
+        continue
     else:
         ratings.append(user_input)
 

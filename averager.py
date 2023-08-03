@@ -10,8 +10,10 @@ print(
 
 ratings = []
 
+counter = 1
+
 while True:
-    user_input = input("> ")
+    user_input = input(f"{counter}. > ")
 
     if user_input == "":
         break
@@ -19,6 +21,8 @@ while True:
         continue
     else:
         ratings.append(user_input)
+
+        counter += 1
 
 cls()
 
@@ -31,6 +35,10 @@ average = round(sum(cleanRatings) / len(cleanRatings), 1)
 
 print(f"Your Ratings:")
 print()
-print("\n".join(ratings))
+
+for num, rating in enumerate(ratings, start=1):
+
+    print(f"{num}. {rating}")
+
 print()
 print(f"Average Rating: {average}/10")
